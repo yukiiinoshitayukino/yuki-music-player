@@ -1,0 +1,151 @@
+﻿<Window x:Class="netcloud.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:netcloud"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1080" WindowStyle="None" WindowStartupLocation="CenterScreen" AllowDrop="True" >
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="222.png" Stretch="UniformToFill" Opacity="0.75">
+
+            </ImageBrush>
+        </Grid.Background>
+        
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30">
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition Height="60">
+
+            </RowDefinition>
+      
+        </Grid.RowDefinitions>
+        <Grid Background="#bc2f2e">
+            <TextBlock Text="yuki m u s i c" FontSize="20" Margin="10 0 0 0">
+               
+                
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+               <!--最小化按钮-->
+                <Button x:Name="Minibtn" Content="&#xe624;" FontFamily="/#iconfont" Width="24" Background="Transparent" Click="Minibtn_Click">
+
+
+                </Button>
+                <!--最大化按钮-->
+                <Button x:Name="Maxbtn" Content="&#xe65b;" FontFamily="/#iconfont" Width="24" Background="Transparent" Click="Maxbtn_Click">
+
+
+                </Button>
+                <!--关闭按钮-->
+                <Button x:Name="Closebtn" Content="&#xe61e;" FontFamily="/#iconfont" Width="24" Background="Transparent" Click="Closebtn_Click">
+
+
+                </Button>
+
+            </StackPanel>
+            
+        </Grid>
+        <Grid Grid.Row="1" Background="Transparent">
+           
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200">
+                    
+                </ColumnDefinition>
+                <ColumnDefinition>
+                    
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Background="AliceBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition />
+                    
+                    
+                    
+                    
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Button Content="&#xf0189;" Background="Transparent" FontFamily="/#iconfont" Width="40" HorizontalAlignment="Left" BorderThickness="0"/>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <Button x:Name="MoreMusic" Content="&#xe620; 发现音乐" FontFamily="/#iconfont" Background="Transparent" Width="100" Height="30" Margin="10 0 0 0" HorizontalAlignment="Left" BorderThickness="0">
+                            
+                        </Button>
+                        <Button x:Name="SearchMusic" BorderThickness="0" Content="&#xe8b9; 搜索" FontFamily="/#iconfont" Background="Transparent" Width="100" Height="30" Margin="-5 0 0 0" HorizontalAlignment="Left">
+
+                        </Button>
+                        <Button x:Name="Video" BorderThickness="0" Content="&#xe649; MV" FontFamily="/#iconfont" Background="Transparent" Width="100" Height="30" Margin="-5 0 0 0" HorizontalAlignment="Left">
+
+                        </Button>
+                        <TextBlock Text="我的音乐" FontWeight="UltraLight" >
+                            
+                        </TextBlock>
+                        <Button x:Name="LocalMusic" BorderThickness="0" Content="&#xe79b; 本地音乐" FontFamily="/#iconfont" Background="Transparent" Width="100" Height="30" Margin="-5 0 0 0" HorizontalAlignment="Left">
+
+                        </Button>
+
+                        <Button x:Name="Download" BorderThickness="0" Content="&#xe60e; 下载管理" FontFamily="/#iconfont" Background="Transparent" Width="100" Height="30" Margin="-5 0 0 0" HorizontalAlignment="Left">
+
+                        </Button>
+
+                        <Button x:Name="HistoryPlay" BorderThickness="0" Content="&#xe8bd; 历史播放" FontFamily="/#iconfont" Background="Transparent" Width="100" Height="30" Margin="-5 0 0 0" HorizontalAlignment="Left">
+
+                        </Button>
+
+                        <Button x:Name="LoadMusic" BorderThickness="0" Content="&#xe60e; 导入音乐" FontFamily="/#iconfont" Background="Transparent" Width="100" Height="30" 
+                                Margin="-5 0 0 0" HorizontalAlignment="Left" Click="btnOpenFile_Click">
+
+                        </Button>
+                        <ListBox x:Name="musicList" DisplayMemberPath="FileName" Background="Transparent"  />
+
+
+
+
+
+                    </StackPanel>
+                </Grid>
+                
+            </Grid>
+            
+        </Grid>
+        <Grid Grid.Row="2" Background="Transparent">
+            <StackPanel Orientation="Horizontal" >
+                <Image Width="70" Source="111.jpg" Stretch="UniformToFill">
+                    
+                </Image>
+                <Button x:Name="Lastone" BorderThickness="0" Content="&#xea73;" FontFamily="/#iconfont" Background="Transparent" Width="40" Height="25" Margin="0 0 0 0" HorizontalAlignment="Left" FontSize="30" >
+
+                </Button>
+
+                <Button x:Name="Play" BorderThickness="0" Content="&#xe8a3;" FontFamily="/#iconfont" Background="Transparent" Width="40" 
+                      Click="Play_Click"  Height="30" Margin="0 0 0 0" HorizontalAlignment="Left" FontSize="30">
+
+                </Button>
+                <MediaElement x:Name="mediaPlayer" LoadedBehavior="Manual" UnloadedBehavior="Stop" />
+                <Button x:Name="Nextone" BorderThickness="0" Content="&#xea6b;
+" FontFamily="/#iconfont" Background="Transparent" Width="40" Height="30" Margin="0 0 0 0" HorizontalAlignment="Left" FontSize="25">
+
+                </Button>
+
+              
+
+
+
+            </StackPanel>
+            
+            
+        </Grid>
+       
+
+    </Grid>
+   
+</Window>
